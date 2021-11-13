@@ -1,6 +1,6 @@
 {
   "name": "hvv-rn-guidetour",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React Native tour guide extends copolit",
   "main": "src/index.js",
   "private": false,
