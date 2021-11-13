@@ -2,14 +2,14 @@
 
 <div align="center">
   <p align="center">
-    <a href="https://travis-ci.org/mohebifar/react-native-copilot">
-      <img src="https://img.shields.io/travis/mohebifar/react-native-copilot.svg" alt="Travis (.org)">
+    <a href="https://travis-ci.org/mohebifar/hvv-rn-guidetour">
+      <img src="https://img.shields.io/travis/mohebifar/hvv-rn-guidetour.svg" alt="Travis (.org)">
     </a>
-    <a href="https://www.npmjs.com/package/react-native-copilot">
-      <img src="https://img.shields.io/npm/v/react-native-copilot.svg" alt="NPM Version" />
+    <a href="https://www.npmjs.com/package/hvv-rn-guidetour">
+      <img src="https://img.shields.io/npm/v/hvv-rn-guidetour.svg" alt="NPM Version" />
     </a>
-    <a href="https://www.npmjs.com/package/react-native-copilot">
-      <img src="https://img.shields.io/npm/dm/react-native-copilot.svg" alt="NPM Downloads" />
+    <a href="https://www.npmjs.com/package/hvv-rn-guidetour">
+      <img src="https://img.shields.io/npm/dm/hvv-rn-guidetour.svg" alt="NPM Downloads" />
     </a>
   </p>
 </div>
@@ -47,7 +47,7 @@ npm install --save react-native-svg
 Use the `copilot()` higher order component for the screen component that you want to use copilot with:
 
 ```js
-import { copilot } from "react-native-copilot";
+import { copilot } from "hvv-rn-guidetour";
 
 class HomeScreen extends Component {
   /* ... */
@@ -59,7 +59,7 @@ export default copilot()(HomeScreen);
 Before defining walkthrough steps for your react elements, you must make them `walkthroughable`. The easiest way to do that for built-in react native components, is using the `walkthroughable` HOC. Then you must wrap the element with `CopilotStep`.
 
 ```js
-import { copilot, walkthroughable, CopilotStep } from "react-native-copilot";
+import { copilot, walkthroughable, CopilotStep } from "hvv-rn-guidetour";
 
 const CopilotText = walkthroughable(Text);
 
@@ -102,7 +102,7 @@ class HomeScreen extends Component {
 export default copilot()(HomeScreen);
 ```
 
-If you are looking for a working example, please check out [this link](https://github.com/mohebifar/react-native-copilot/blob/master/example/App.js).
+If you are looking for a working example, please check out [this link](https://github.com/mohebifar/hvv-rn-guidetour/blob/master/example/App.js).
 
 ### Overlays and animation
 
@@ -127,7 +127,7 @@ copilot({
 
 ### Custom tooltip component
 
-You can customize the tooltip by passing a component to the `copilot` HOC maker. If you are looking for an example tooltip component, take a look at [the default tooltip implementation](https://github.com/mohebifar/react-native-copilot/blob/master/src/components/Tooltip.js).
+You can customize the tooltip by passing a component to the `copilot` HOC maker. If you are looking for an example tooltip component, take a look at [the default tooltip implementation](https://github.com/mohebifar/hvv-rn-guidetour/blob/master/src/components/Tooltip.js).
 
 ```js
 const TooltipComponent = ({
@@ -192,7 +192,7 @@ copilot({
 
 ### Custom step number component
 
-You can customize the step number by passing a component to the `copilot` HOC maker. If you are looking for an example step number component, take a look at [the default step number implementation](https://github.com/mohebifar/react-native-copilot/blob/master/src/components/StepNumber.js).
+You can customize the step number by passing a component to the `copilot` HOC maker. If you are looking for an example step number component, take a look at [the default step number implementation](https://github.com/mohebifar/hvv-rn-guidetour/blob/master/src/components/StepNumber.js).
 
 ```js
 const StepNumberComponent = ({
@@ -252,7 +252,7 @@ copilot({
 The components wrapped inside `CopilotStep`, will receive a `copilot` prop of type `Object` which the outermost rendered element of the component or the element that you want the tooltip be shown around, must extend.
 
 ```js
-import { copilot, CopilotStep } from "react-native-copilot";
+import { copilot, CopilotStep } from "hvv-rn-guidetour";
 
 const CustomComponent = ({ copilot }) => (
   <View {...copilot}>
@@ -313,7 +313,7 @@ eg `this.props.start(false, ScrollViewRef)`
 
 ```js
 import { ScrollView } from "react-native";
-import { copilot } from "react-native-copilot";
+import { copilot } from "hvv-rn-guidetour";
 
 class HomeScreen {
   componentDidMount() {
@@ -341,12 +341,12 @@ List of available events is:
 
 - `start` — Copilot tutorial has started.
 - `stop` — Copilot tutorial has ended or skipped.
-- `stepChange` — Next step is triggered. Passes [`Step`](https://github.com/mohebifar/react-native-copilot/blob/master/src/types.js#L2) instance as event handler argument.
+- `stepChange` — Next step is triggered. Passes [`Step`](https://github.com/mohebifar/hvv-rn-guidetour/blob/master/src/types.js#L2) instance as event handler argument.
 
 **Example:**
 
 ```js
-import { copilot, CopilotStep } from "react-native-copilot";
+import { copilot, CopilotStep } from "hvv-rn-guidetour";
 
 const CustomComponent = ({ copilot }) => (
   <View {...copilot}>

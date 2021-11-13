@@ -1,4 +1,4 @@
-declare module 'react-native-copilot' {
+declare module 'hvv-rn-guidetour' {
   import { Component, ComponentProps, ComponentType, ReactElement, ReactNode } from 'react';
 
   export type Step = {
